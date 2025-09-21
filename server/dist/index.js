@@ -13,6 +13,7 @@ const assets_1 = require("./routes/assets");
 const adcopy_1 = require("./routes/adcopy");
 const ml_1 = require("./routes/ml");
 const s3_1 = require("./routes/s3");
+const analytics_1 = require("./routes/analytics");
 const app = (0, express_1.default)();
 const port = process.env.PORT || 3001;
 app.use((0, cors_1.default)());
@@ -28,6 +29,7 @@ app.use('/api/s3', s3_1.s3Routes);
 app.get('/api/health', (req, res) => {
     res.status(200).send('Backend is healthy!');
 });
+app.use('/api/analytics', analytics_1.analyticsRoutes);
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });

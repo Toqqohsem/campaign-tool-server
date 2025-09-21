@@ -8,6 +8,7 @@ import { creativeAssetRoutes } from './routes/assets';
 import { adCopyRoutes } from './routes/adcopy';
 import { mlRoutes } from './routes/ml';
 import { s3Routes } from './routes/s3';
+import { analyticsRoutes } from './routes/analytics';
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -27,6 +28,7 @@ app.use('/api/s3', s3Routes);
 app.get('/api/health', (req, res) => {
   res.status(200).send('Backend is healthy!');
 });
+app.use('/api/analytics', analyticsRoutes);
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
