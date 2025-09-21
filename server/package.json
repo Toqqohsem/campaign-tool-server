@@ -16,10 +16,14 @@
     "@aws-sdk/client-s3": "^3.501.0",
     "@aws-sdk/lib-storage": "^3.893.0",
     "@aws-sdk/s3-request-presigner": "^3.501.0",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.18.2",
-    "pg": "^8.11.3"
+    "pg": "^8.11.3",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
