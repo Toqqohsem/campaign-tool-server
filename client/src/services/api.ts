@@ -1,8 +1,11 @@
 // client/src/services/api.ts
 import axios from 'axios';
 
+const baseURL = 'http://54.169.244.206:3001/api';  // Add /api here
+
 export const api = axios.create({
-  baseURL: import.meta.env.VITE_AWS_API_GATEWAY_URL || 'http://localhost:3001/api',
+  baseURL: baseURL,
+  timeout: 10000,
 });
 
 // Mock/Placeholder implementations for components to use
