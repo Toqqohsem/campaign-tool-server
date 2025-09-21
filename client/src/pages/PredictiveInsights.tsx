@@ -4,7 +4,7 @@ import { useCampaigns } from '../hooks/useCampaigns';
 import { mlApi } from '../services/api';
 
 export default function PredictiveInsights() {
-  const { leads, personas, selectedCampaignId, setSelectedCampaignId, campaigns, getCampaignStats, loading } = useCampaigns();
+  const { leads, selectedCampaignId, setSelectedCampaignId, campaigns, getCampaignStats } = useCampaigns();
   const [recommendations, setRecommendations] = React.useState<string[]>([]);
   const [loadingRecommendations, setLoadingRecommendations] = React.useState(false);
   
@@ -29,7 +29,7 @@ export default function PredictiveInsights() {
       } catch (error) {
         console.error('Error loading ML recommendations:', error);
         // Fallback to local recommendations
-        const { generateMLRecommendations } = await import('../utils/mlModel');
+        const { generateMLRecommendations } = await import('../utils/mlModel.ts');
         setRecommendations(generateMLRecommendations(campaignLeads));
       } finally {
         setLoadingRecommendations(false);

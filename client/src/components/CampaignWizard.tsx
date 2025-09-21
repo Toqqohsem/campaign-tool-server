@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { ArrowLeft, ArrowRight, Calendar, DollarSign } from 'lucide-react';
 import { useCampaigns } from '../hooks/useCampaigns';
 

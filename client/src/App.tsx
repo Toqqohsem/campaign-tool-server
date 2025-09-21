@@ -1,14 +1,14 @@
 // client/src/App.tsx
 import { useState } from 'react';
-import { CampaignsProvider } from './hooks/useCampaigns';
-import Layout from './components/Layout';
-import Dashboard from './components/Dashboard';
-import CampaignList from './components/CampaignList';
-import PersonaCreator from './components/PersonaCreator';
-import AssetOrganizer from './components/AssetOrganizer';
-import LeadManager from './components/LeadManager';
-import PredictiveInsights from './components/PredictiveInsights';
-import CampaignOverview from './components/CampaignOverview';
+import { CampaignsProvider } from './hooks/useCampaigns.tsx';
+import Layout from './components/Layout.tsx';
+import Dashboard from './pages/Dashboard.tsx';
+import CampaignList from './pages/CampaignList.tsx';
+import PersonaCreator from './pages/PersonaCreator.tsx';
+import AssetOrganizer from './pages/AssetOrganizer.tsx';
+import LeadManager from './pages/LeadManager.tsx';
+import PredictiveInsights from './pages/PredictiveInsights.tsx';
+import CampaignOverview from './pages/CampaignOverview.tsx';
 
 function App() {
   const [currentView, setCurrentView] = useState('dashboard');
@@ -16,13 +16,12 @@ function App() {
 
   const handleViewChange = (view: string) => {
     if (view === 'overview' && !selectedCampaignId) {
-      // Don't go to overview if no campaign is selected
       setCurrentView('campaigns');
     } else {
       setCurrentView(view);
     }
   };
-
+  
   const renderView = () => {
     switch (currentView) {
       case 'campaigns': return <CampaignList onViewChange={handleViewChange} onSelectCampaign={setSelectedCampaignId} />;

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Plus, Edit2, Trash2, Play, Pause, Eye } from 'lucide-react';
+import { useState } from 'react';
+import { Plus, Trash2, Play, Pause, Eye } from 'lucide-react';
 import { useCampaigns } from '../hooks/useCampaigns';
-import CampaignWizard from './CampaignWizard';
+import CampaignWizard from '../components/CampaignWizard';
 
 interface CampaignListProps {
   onViewChange: (view: string) => void;

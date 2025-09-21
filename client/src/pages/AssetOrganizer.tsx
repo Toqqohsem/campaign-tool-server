@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Upload, Image, Video, Plus, Trash2, Edit2, FileText } from 'lucide-react';
 import { useCampaigns } from '../hooks/useCampaigns';
 import { creativeAssetApi, uploadToS3 } from '../services/api';
@@ -24,14 +24,12 @@ export default function AssetOrganizer() {
   const [editingAdCopyId, setEditingAdCopyId] = useState<string | null>(null);
   const [adCopyForm, setAdCopyForm] = useState({ headline: '', description: '' });
 
-  const selectedCampaign = campaigns.find(c => c.id === selectedCampaignId);
+
   const campaignPersonas = personas.filter(p => p.campaign_id === selectedCampaignId);
   const campaignAssets = creativeAssets.filter(a => a.campaign_id === selectedCampaignId);
   const campaignAdCopy = adCopy.filter(ac => ac.campaign_id === selectedCampaignId);
 
-  const filteredAssets = selectedPersonaId 
-    ? campaignAssets.filter(a => a.persona_id === selectedPersonaId)
-    : campaignAssets;
+
 
   const filteredAdCopy = selectedPersonaId
     ? campaignAdCopy.filter(ac => ac.persona_id === selectedPersonaId)

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Download, FileText, Users, Target, TrendingUp, Calendar, DollarSign } from 'lucide-react';
+
+import { Download, FileText, Users, Target, TrendingUp, Calendar } from 'lucide-react';
 import { useCampaigns } from '../hooks/useCampaigns';
 
 export default function CampaignOverview() {

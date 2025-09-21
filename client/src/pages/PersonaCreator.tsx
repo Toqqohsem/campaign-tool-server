@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Plus, Edit2, Trash2, Users, Brain, AlertCircle } from 'lucide-react';
 import { useCampaigns } from '../hooks/useCampaigns';
 

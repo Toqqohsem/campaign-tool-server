@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { BarChart3, Users, Target, TrendingUp, ArrowUpRight, ArrowDownRight } from 'lucide-react';
 import { useCampaigns } from '../hooks/useCampaigns';
 

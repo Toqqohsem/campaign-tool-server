@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Upload, Download, Plus, Edit2, Trash2, Filter, Search, User, Brain } from 'lucide-react';
+import { Upload, Download, Plus, Edit2, Trash2, Search, User, Brain } from 'lucide-react';
 import { useCampaigns } from '../hooks/useCampaigns';
-import LeadModal from './LeadModal';
+import LeadModal from '../components/LeadModal';
 
 export default function LeadManager() {
   const { 
