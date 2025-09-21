@@ -1,5 +1,9 @@
+import { Router, Request, Response } from 'express';
+
+export const analyticsRoutes = Router();
+
 // 🚀 DEMO ENDPOINT WITH MOCK DATA (for AWS event)
-analyticsRoutes.get('/demo-insights/:campaign_id', async (req, res) => {
+analyticsRoutes.get('/demo-insights/:campaign_id', async (req: Request, res: Response) => {
   res.json({
     success: true,
     campaign: "Luxury Condos Downtown - AWS Demo",

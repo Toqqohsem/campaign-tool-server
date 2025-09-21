@@ -8,8 +8,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.analyticsRoutes = void 0;
+const express_1 = require("express");
+exports.analyticsRoutes = (0, express_1.Router)();
 // 🚀 DEMO ENDPOINT WITH MOCK DATA (for AWS event)
-analyticsRoutes.get('/demo-insights/:campaign_id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+exports.analyticsRoutes.get('/demo-insights/:campaign_id', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     res.json({
         success: true,
         campaign: "Luxury Condos Downtown - AWS Demo",
