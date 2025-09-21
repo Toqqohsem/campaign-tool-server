@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node dist/index.js",
     "dev": "nodemon --watch src --ext ts --exec ts-node src/index.ts",
-    "build": "tsc && vite build",
+    "build": "tsc",
     "serve": "npm run build && npm run start"
   },
   "keywords": [],
